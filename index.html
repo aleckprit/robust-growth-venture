@@ -96,12 +96,21 @@
   }
   nav.links a:hover{ color: var(--ink); }
   nav.links a.active{ color: var(--pine); border-color: var(--gold); }
-  .nav-toggle{ display:none; background:none; border:1px solid var(--line-strong); width:38px; height:38px; cursor:pointer; }
-  .nav-toggle span, .nav-toggle::before, .nav-toggle::after{ display:none; }
-  .nav-toggle-icon{ width:16px; height:1px; background:var(--ink); position:relative; margin:0 auto; }
-  .nav-toggle-icon::before, .nav-toggle-icon::after{ content:""; position:absolute; left:0; width:16px; height:1px; background:var(--ink); }
-  .nav-toggle-icon::before{ top:-5px; }
-  .nav-toggle-icon::after{ top:5px; }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+    width:40px; height:40px;
+    cursor:pointer;
+    align-items:center; justify-content:center;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .nav-toggle:hover{ border-color: var(--pine); background: var(--bg-soft); }
+  .nav-toggle-icon{ width:18px; height:2px; background:var(--ink); position:relative; margin:0 auto; border-radius:1px; }
+  .nav-toggle-icon::before, .nav-toggle-icon::after{ content:""; position:absolute; left:0; width:18px; height:2px; background:var(--ink); border-radius:1px; transition: transform .2s ease; }
+  .nav-toggle-icon::before{ top:-6px; }
+  .nav-toggle-icon::after{ top:6px; }
 
   /* ---------- PAGES ---------- */
   .page{ display:none; }
@@ -302,7 +311,7 @@
     nav.links{ position:fixed; top:69px; left:0; right:0; background:var(--bg); flex-direction:column; gap:0; border-bottom:1px solid var(--line); max-height:0; overflow:hidden; transition:max-height .25s ease; }
     nav.links.open{ max-height:220px; }
     nav.links a{ padding: 16px 32px; width:100%; border-bottom:1px solid var(--line); }
-    .nav-toggle{ display:block; }
+    .nav-toggle{ display:flex; }
     .hero-grid{ grid-template-columns:1fr; gap:40px; }
     .thesis-grid{ grid-template-columns:1fr; gap:24px; }
     .cta-row{ grid-template-columns:1fr; }
@@ -462,6 +471,7 @@
             <span class="p-tag">家居品牌 · D2C 電商</span>
           </div>
           <p class="desc">以 D2C 模式解決通路成本堆疊的問題，讓大家能以負擔得起的價格，擁有好質感的北歐設計家具。除電商外，目前在台北、新北、新竹、台中、台南、高雄都有零售店，2016 年成立以來已服務超過10萬個家庭，累積銷售額突破新台幣 18 億元。</p>
+          <a class="p-link" href="https://www.mrliving.com.tw/" target="_blank" rel="noopener">前往網站 mrliving.com.tw →</a>
         </div>
 
 
